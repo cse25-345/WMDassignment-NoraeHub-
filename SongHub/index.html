@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Noraehub</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo-wrap">
+      <div class="logo-circle">
+        <img src="images/noraehub-bg.png">
+      </div>
+    </div>
+
+    <div class="nav-icons">
+      <button class="nav-btn active" title="Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5L12 3l9 6.5V21H3V9.5z"/><rect x="9" y="14" width="6" height="7"/></svg>
+      </button>
+      <button class="nav-btn" title="Explore">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="3" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="21"/><line x1="3" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="21" y2="12"/></svg>
+      </button>
+      <button class="nav-btn" title="Library">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      </button>
+      <button class="nav-btn" title="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="nav-btn" title="Radio">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12" y2="20"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="main-grid">
+
+    <section class="picks-section">
+      <h2 class="section-title">TODAY'S PICKS</h2>
+      <div class="player-card">
+      
+        <div class="album-art">
+          <img id="coverArt"
+          src="images/born-to-be.jpg">
+        </div>
+
+        <div class="player-right">
+          <div class="vinyl-wrap">
+            <div class="vinyl-disc">
+              <div class="vinyl-label">
+                <div class="vinyl-hole"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="track-info">
+            <p class="track-artist">ITZY</p>
+            <p class="track-title">BORN TO BE</p>
+          </div>
+
+          <div class="track-meta">
+            <div class="lyrics-box">
+             <h4>Lyrics</h4>
+             <pre id="lyricsText">Play song to load lyrics...</pre>
+            </div>
+
+            <span>8 JAN 2024, JYP Ent.</span><br/>
+            <span>Maria Marcus, Tobias Näslund, &amp; Noday</span>
+          </div>
+
+          <div class="player-controls">
+            <div class="progress-bar">
+              <div class="time-info">
+                <span id="currentTime">0:00</span>
+                  /
+                <span id="duration">0:00</span>
+              </div>
+
+              <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+              
+              <div class="progress-fill"></div>
+            </div>
+            <div class="controls-row">
+              <audio id="audioPlayer" src="audio-files/BORN TO BE.mp3" type="audio/mpeg"></audio>
+              <button class="ctrl-btn">⇄</button>
+              <button id="prevBtn" class="ctrl-btn">◂</button>
+              <button class="ctrl-btn play-btn">▶</button>
+              <button id="nextBtn" class="ctrl-btn">▸</button>
+              <button class="ctrl-btn">↻</button>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+
+      <div class="sidebar-card top-artist-card">
+        <h3 class="sidebar-title">Top Artist</h3>
+        <div class="top-artist-body">
+          <div class="artist-img-wrap">
+            <img src="images/this-is-for-a-c.jpg" alt="TAKEDOWN"
+                 class="artist-img"
+                 onerror="this.style.background='linear-gradient(135deg,#c8a06e,#8b6914)';this.style.width='100%';this.style.height='100%';this.removeAttribute('src')">
+          </div>
+          <div class="artist-info">
+            <p class="artist-song-title">TAKEDOWN</p>
+            <p class="artist-names">TWICE (JEONGYEON,<br/>JIHYO, CHAEYOUNG)</p>
+            <p class="artist-album">[KPOP Demon<br/>Hunters]</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card top-songs-card">
+        <h3 class="sidebar-title">Top Songs</h3>
+        <div class="song-list">
+
+          <div class="song-item">
+            <div class="song-thumb" style="background:linear-gradient(135deg,#2e7d32,#66bb6a)">
+              <img src="images/psycho-a-c.jpg" alt="Psycho"
+                   onerror="this.style.display='none'"/>
+            </div>
+            <div class="song-details">
+              <p class="song-name">PSYCHO</p>
+              <p class="song-sub">The NewS Festival &lt; 25 826 215</p>
+            </div>
+          </div>
+
+          <div class="song-item">
+            <div class="song-thumb" style="background:linear-gradient(135deg,#4a148c,#9c27b0)">
+              <img src="images/dun-dun-a-c.jfif" alt="Dun Dun"
+                   onerror="this.style.display='none'"/>
+            </div>
+            <div class="song-details">
+              <p class="song-name">DUN DUN</p>
+              <p class="song-sub">Reminiscence &lt; 190 182 193</p>
+            </div>
+          </div>
+
+          <div class="song-item">
+            <div class="song-thumb" style="background:linear-gradient(135deg,#b71c1c,#ef5350)">
+              <img src="images/that's-a-no-no-a-c.jfif" alt="That's a No No">
+            </div>
+            <div class="song-details">
+              <p class="song-name">THAT'S A NO NO</p>
+              <p class="song-sub">IT'Z ME &lt; 25 526 215</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <p class="footer-heading">Company</p>
+        <a href="#">About Us</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Community</p>
+        <a href="#">For Artists</a>
+        <a href="#">Advertise</a>
+        <a href="#">Updates</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Legal</p>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Ts &amp; Cs</a>
+        <a href="#">Cookies</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">About</p>
+        <a href="#">Support</a>
+        <a href="#">App</a>
+      </div>
+      <div class="footer-col socials-col">
+        <p class="footer-heading">Socials</p>
+        <div class="social-icons">
+          <!-- TikTok -->
+          <a href="#" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+          </a>
+          <!-- Instagram -->
+          <a href="#" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <!-- X/Twitter -->
+          <a href="#" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <!-- Facebook -->
+          <a href="#" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+        <p class="footer-copy">All rights reserved @Noraehub 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+const audio = document.getElementById("audioPlayer");
+const playBtn = document.querySelector(".play-btn");
+
+// PLAY / PAUSE
+playBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    playBtn.innerHTML = "⏸";
+  } else {
+    audio.pause();
+    playBtn.innerHTML = "▶";
+  }
+});
+
+// VOLUME
+const volumeSlider = document.getElementById("volumeSlider");
+if (volumeSlider) {
+  volumeSlider.addEventListener("input", () => {
+    audio.volume = volumeSlider.value;
+  });
+}
+
+// TIME
+const currentTimeEl = document.getElementById("currentTime");
+const durationEl = document.getElementById("duration");
+
+function formatTime(time) {
+  const min = Math.floor(time / 60);
+  const sec = Math.floor(time % 60);
+  return min + ":" + (sec < 10 ? "0" + sec : sec);
+}
+
+audio.addEventListener("loadedmetadata", () => {
+  if (durationEl) durationEl.textContent = formatTime(audio.duration);
+});
+
+audio.addEventListener("timeupdate", () => {
+  if (currentTimeEl) {
+    currentTimeEl.textContent = formatTime(audio.currentTime);
+  }
+});
+
+// PROGRESS BAR
+const progressFill = document.querySelector(".progress-fill");
+const progressBar = document.querySelector(".progress-bar");
+
+audio.addEventListener("timeupdate", () => {
+  const percent = (audio.currentTime / audio.duration) * 100;
+  if (progressFill) progressFill.style.width = percent + "%";
+});
+
+// CLICK TO SEEK
+if (progressBar) {
+  progressBar.addEventListener("click", (e) => {
+    const width = progressBar.clientWidth;
+    const clickX = e.offsetX;
+    audio.currentTime = (clickX / width) * audio.duration;
+  });
+}
+
+// SONG LIST (cover switching)
+const songs = [
+  {
+    title: "BORN TO BE",
+    artist: "ITZY",
+    file: "audio-files/BORN TO BE.mp3",
+    cover: "images/born-to-be.jpg"
+  },
+  {
+    title: "DUN DUN",
+    artist: "EVERGLOW",
+    file: "audio-files/DUN DUN.mp3",
+    cover: "images/dun-dun-a-c.jfif"
+  }
+];
+
+let currentSong = 0;
+
+const cover = document.getElementById("coverArt");
+const titleEl = document.querySelector(".track-title");
+const artistEl = document.querySelector(".track-artist");
+
+function loadSong(index) {
+  const song = songs[index];
+
+  audio.src = song.file;
+  cover.src = song.cover;
+  titleEl.textContent = song.title;
+  artistEl.textContent = song.artist;
+}
+
+// NEXT / PREV
+document.getElementById("nextBtn").addEventListener("click", () => {
+  currentSong = (currentSong + 1) % songs.length;
+  loadSong(currentSong);
+  audio.play();
+});
+
+document.getElementById("prevBtn").addEventListener("click", () => {
+  currentSong = (currentSong - 1 + songs.length) % songs.length;
+  loadSong(currentSong);
+  audio.play();
+});
+</script>
+
+
+</body>
+</html>
