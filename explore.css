@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0d0d0d;
+  color: white;
+  font-family: 'Rajdhani', 'Courier New', monospace;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 12px 20px;
+  background: transparent;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-circle img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.logo-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icons {
+  background: white;
+  border-radius: 40px;
+  padding: 6px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.nav-btn {
+  text-decoration: none;
+  color: #7b2fff;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 30px;
+}
+
+.nav-btn.active {
+  background: #e0d4ff;
+}
+
+.nav-btn:hover {
+  background: #220028;
+}
+
+.main-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.explore-layout{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+}
+
+
+.explore-panel{
+    background: #220028;
+    border-radius: 40px;
+    padding: 20px;
+    flex: 2;
+}
+
+
+.explore-panel h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.explore-grid{
+    display: flex;
+    gap: 20px;
+}
+
+.explore-card{
+    flex: 1;
+    height: 700px;
+    overflow: hidden;
+    border-radius: 90px;
+}
+
+
+.explore-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.genres-panel{
+    flex: 1;
+
+    background: #220028;
+
+    border-radius: 50px;
+
+    padding: 20px;
+
+    min-width: 320px;
+}
+
+
+.genres-panel h2{
+    margin-bottom: 20px;
+}
+
+
+.genres-grid{
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.genre-card{
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+.genre-card img{
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.footer {
+  background: #220028;
+  border-radius: 20px 20px 0 0;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-col a {
+  color: #b8a8d0;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.footer-col h4 {
+  font-size: 14px;
+}
